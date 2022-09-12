@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://localhost/wordpress/wp-content/uploads/2022/08/15251875958364-300x93.png">
 <meta property="article:published_time" content="2022-09-12T12:11:56.493Z">
-<meta property="article:modified_time" content="2022-09-12T12:12:16.326Z">
+<meta property="article:modified_time" content="2022-09-12T12:58:46.381Z">
 <meta property="article:author" content="knifefire">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://localhost/wordpress/wp-content/uploads/2022/08/15251875958364-300x93.png">
@@ -513,7 +513,7 @@ pkg install vim curl wget git tree -y
 <p>执行下面这个命令确保已经安装好了 curl 命令</p>
 <pre><code>sh -c &quot;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&quot;  
 </code></pre>
-<p>如果因为不可抗力的原因，出现port 443: Connection refused网络超时的情况，那么执行下面国光迁移到国内的地址的命令即可：</p>
+<p>如果因为不可抗力的原因，出现port 443: Connection refused网络超时的情况，那么执行下面我迁移到国内的地址的命令即可：</p>
 <pre><code>sh -c &quot;$(curl -fsSL https://html.sqlsec.com/termux-install.sh)&quot;  
 </code></pre>
 <p>Android6.0 以上会弹框确认是否授权访问文件,点击始终允许授权后 Termux 可以方便的访问SD卡文件。</p>
@@ -663,7 +663,7 @@ plugins=(其他的插件 zsh-autosuggestions)
 <pre><code>tsu
 </code></pre>
 <p>即可切换root用户，这个时候会弹出root授权提示，给予其root权限，效果图如下:</p>
-<p>在管理员身份下，输入exit可回到普通用户身份。不过本文没有设计到 root 权限的操作，一些底层的工具可能才会需要，考虑到 root 的不安全性 和 那些工具的冷门性，国光这里就没有继续拓展。</p>
+<p>在管理员身份下，输入exit可回到普通用户身份。不过本文没有设计到 root 权限的操作，一些底层的工具可能才会需要，考虑到 root 的不安全性 和 那些工具的冷门性，我这里就没有继续拓展。</p>
 <h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><p>Termux 支持的开发环境很强，可以完美的运行 C、Python、Java、PHP、Ruby等开发环境，建议读者朋友们选择自己需要的开发环境折腾。</p>
 <p>编辑器</p>
 <p>写代码前总得折腾一下编辑器，毕竟磨刀不误砍柴工嘛。Termux 支持多种编辑器，完全可以满足日常使用需求。</p>
@@ -831,7 +831,7 @@ int main()&#123;
 <p>编辑完成后，使用 clang 来编译生成 hello 的可执行文件：</p>
 <pre><code>clang hello.c -o hello
 </code></pre>
-<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><p>Termux 原生编译JAVA只能使用 ecj (Eclipse Compiler for Java) 和 dx 了，然后使用 Android 自带的 dalvikvm 运行。如果想要完整体验JAVA环境的话，另一个方法就是 Termux 里面安装一个完整的 Linux 系统，然后在 Linux里面运行Java，安装系统部分下面文章会详细介绍，这一节国光只介绍最基本的操作。</p>
+<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><p>Termux 原生编译JAVA只能使用 ecj (Eclipse Compiler for Java) 和 dx 了，然后使用 Android 自带的 dalvikvm 运行。如果想要完整体验JAVA环境的话，另一个方法就是 Termux 里面安装一个完整的 Linux 系统，然后在 Linux里面运行Java，安装系统部分下面文章会详细介绍，这一节我只介绍最基本的操作。</p>
 <p>安装编译工具</p>
 <pre><code>pkg install ecj dx -y
 </code></pre>
@@ -1180,7 +1180,7 @@ python2 -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
 </code></pre>
 <h3 id="升级-pip3"><a href="#升级-pip3" class="headerlink" title="升级 pip3"></a>升级 pip3</h3><pre><code>python -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 </code></pre>
-<p>这两条命令分别升级了pip2和pip3到最新版。升级完成后你会惊讶的发现你的pip3命令不见了？？？然后这个时候就开始吐槽国光了（内心OS：国光 非要强迫症升级 pip 版本，这下好了吧！）</p>
+<p>这两条命令分别升级了pip2和pip3到最新版。升级完成后你会惊讶的发现你的pip3命令不见了？？？然后这个时候就开始吐槽我了（内心OS：我 非要强迫症升级 pip 版本，这下好了吧！）</p>
 <p>不要慌 问题不大，我们可以手动查看当前有哪些可执行的 pip 文件，使用如下命令：</p>
 <pre><code>ls /data/data/com.termux/files/usr/bin|grep pip
 </code></pre>
@@ -1201,7 +1201,7 @@ pip3.8 install ipython -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 ipython -V
 </code></pre>
 <h2 id="Jupyter-Notebook"><a href="#Jupyter-Notebook" class="headerlink" title="Jupyter Notebook"></a>Jupyter Notebook</h2><p>Jupyter Notebook（此前被称为 iPython notebook）可以在 Web 端提供Python交互，虽然和iPython共享同一个内核，但是更强大。</p>
-<p>Jupyter notebook 相关的依赖比较多 安装起来较为耗时 国光就只用 Python3 版本来演示了，另外请务必要使用国内的 pip 源来安装</p>
+<p>Jupyter notebook 相关的依赖比较多 安装起来较为耗时 我就只用 Python3 版本来演示了，另外请务必要使用国内的 pip 源来安装</p>
 <p>下面官方建议安装的完整的命令：</p>
 <pre><code>pkg update
 
@@ -1254,7 +1254,7 @@ pip3 install jupyterlab -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 <pre><code>jupyter --version
 </code></pre>
 <p>所有插件均安装完成</p>
-<p>Jupyter Notebook就安装好了，这个比较强大更详细的教程大家可以自行去谷歌或者百度一下，国光这里只演示基本的功能。</p>
+<p>Jupyter Notebook就安装好了，这个比较强大更详细的教程大家可以自行去谷歌或者百度一下，我这里只演示基本的功能。</p>
 <p>先启动 notebook</p>
 <pre><code>jupyter notebook
 </code></pre>
@@ -1262,7 +1262,7 @@ pip3 install jupyterlab -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 <p>复制出的这个URL地址 在浏览器中打开</p>
 <p>就成功运行了，那我们按照提示走个形式，输出个 Hello World就跑路：</p>
 <p>OK 运行成功，那么回到 Termux 里面使用组合键 Ctrl + C -&gt; 中止当前的 Jupyter 进程</p>
-<h1 id="网站搭建"><a href="#网站搭建" class="headerlink" title="网站搭建"></a>网站搭建</h1><p>网站搭建这一块实际上原理是大同小异的，国光这里只写几个网站的安装方法，给大家提供一个思路。</p>
+<h1 id="网站搭建"><a href="#网站搭建" class="headerlink" title="网站搭建"></a>网站搭建</h1><p>网站搭建这一块实际上原理是大同小异的，我这里只写几个网站的安装方法，给大家提供一个思路。</p>
 <h2 id="DVWA"><a href="#DVWA" class="headerlink" title="DVWA"></a>DVWA</h2><p>DVWA 是一个用来搞 Web 安全从业者入门使用的一个练习靶场，用来学习掌握基本的漏洞原理使用的，如果你对 Web 安全不感兴趣的话可以直接跳过这一个小节。</p>
 <p>这里建议 DVWA 练习的时候 要结合源码去分析漏洞 不要直接把网上攻击流程走一步就草草了之了 不看源码的学习 等于啥都没有学</p>
 <p>环境准备</p>
@@ -1407,7 +1407,7 @@ cp -rf public/* $PREFIX/share/nginx/html/hexo
         <p><span>本文标题:</span><a  href="/2022/09/12/termux/"></a></p>
         <p><span>文章作者:</span><a  href="/" title="访问  的个人博客"></a></p>
         <p><span>发布时间:</span>2022年09月12日 - 20时11分</p>
-        <p><span>最后更新:</span>2022年09月12日 - 20时12分</p>
+        <p><span>最后更新:</span>2022年09月12日 - 20时58分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2022/09/12/termux/" title="">http://yoursite.com/2022/09/12/termux/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2022/09/12/termux/　　作者: " title=""></span>
