@@ -277,6 +277,199 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-自动打卡" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2022/09/12/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/" class="article-date">
+      <time datetime="2022-09-12T15:35:41.075Z" itemprop="datePublished">2022-09-12</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h3><h5 id="1-post填表—网络编程技术"><a href="#1-post填表—网络编程技术" class="headerlink" title="1.post填表—网络编程技术"></a>1.post填表—网络编程技术</h5><pre><code>  2.fiddler抓包技术
+  3.云函数-----定时执行函数(代码)
+</code></pre>
+<h4 id="post"><a href="#post" class="headerlink" title="post"></a>post</h4><p>一个URL地址，它用于描述一个网络上的资源，而HTTP中的GET，POST，PUT，DELETE就对应着对这个资源的查，改，增，删4个操作。到这里，大家应该有个大概的了解了，GET一般用于获取&#x2F;查询资源信息，而POST一般用于更新资源信息。</p>
+<h4 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h4><p>要实现对App的网络数据抓包，需要监控App与服务器交互之间的网络节点，监控其中任意一个网络节点（网卡），获取所有经过网卡中的数据，对这些数据按照网络协议进行解析，这就是抓包的基本原理。</p>
+<h3 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h3><p>校园健康打卡 就相当于更新, 所以用post 发送<br>而post发送什么呢?<br>这里就需要我们抓包,看看抓取的包 它干了什么,然后我们模拟一个环境,发送post 就实现了校园健康打卡.</p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="抓包-1"><a href="#抓包-1" class="headerlink" title="抓包"></a>抓包</h3><p>！<a target="_blank" rel="noopener" href="http://www.winwin7.com/soft/13111.html">点我进行fiddler下载</a></p>
+<h4 id="fiddler配置"><a href="#fiddler配置" class="headerlink" title="fiddler配置"></a>fiddler配置</h4><h6 id="点击选项"><a href="#点击选项" class="headerlink" title="点击选项"></a>点击选项</h6><p><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C2.png%22"></p>
+<h6 id="然后设置成我这样"><a href="#然后设置成我这样" class="headerlink" title="然后设置成我这样"></a>然后设置成我这样</h6><p>！<a href="%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C1.png%22"></a><br>！<a href="%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C3.png%22"></a><br>配置就欧克了</p>
+<h3 id="手机连接fiddler"><a href="#手机连接fiddler" class="headerlink" title="手机连接fiddler"></a>手机连接fiddler</h3><p> 最好是手机开热点，也可以都连接一个wifi。<br> 然后查看自己电脑的IP，可以在CMD中输入ipconfig，那个无线局域网下的ipv4地址就是你的ip地址</p>
+<h3 id="手机端"><a href="#手机端" class="headerlink" title="手机端"></a>手机端</h3><p> 在游览器输入你刚才查看的ip:8888<br> 点击下载并安装证书就OK了</p>
+<h3 id="抓取数据"><a href="#抓取数据" class="headerlink" title="抓取数据"></a>抓取数据</h3><p> 先将fiddler数据清空：<br> <img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C5.png%22"></p>
+<p>再点击手机上的打卡<br>打卡完毕后,fidder上已经有数据了 ,双击点开<br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C4.png%22"><br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C10.png%22"><br>这里就是个人信息啦 你也看到36.5的温度了<br>这时我们点击表头:<br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C6.png%22"><br>再复制所有标头<br>到一个文本里面<br>找到 cookie &#x3D; 后面的内容<br>把后面的内容复制过来  这就是你的登入信息  cookie  当然  每个人的都不一样!<br>再把文本视图的内容全部复制下来,这里面包含你的温度,位置<br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C7.png%22"><br>到这里数据获取全部完毕.</p>
+<h3 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h3><p>这里我最开始是用Java 写的,因为其他没学过! 后面因为云函数的原因 看了一下python<br>这里附上代码 </p>
+<h4 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h4><p>import java.io.UnsupportedEncodingException;import java.util.Random;import java.io.BufferedReader;import java.io.DataOutputStream;import java.io.InputStreamReader;import java.net.HttpURLConnection;import java.net.URL;public class Util {</p>
+<pre><code>private Util() &#123;
+&#125;
+
+
+public static void main(String[] args) throws Exception &#123;
+   new Thread(new Runnable() &#123;
+       @Override
+       public void run() &#123;
+           String str=&quot;&quot;;//这里填写data数据
+           String data = getData(str);
+           try &#123;
+               System.out.println(java.net.URLDecoder.decode(data, &quot;UTF-8&quot;));
+           &#125; catch (UnsupportedEncodingException e) &#123;
+               throw new RuntimeException(e);
+           &#125;
+           try &#123;
+               post(&quot;http://xyjkdkfx.hbmzu.edu.cn/index/s.clock_in/post.html&quot;,&quot;&quot;,data);//第一个填写网站
+           &#125; catch (Exception e) &#123;
+               throw new RuntimeException(e);
+           &#125;
+       &#125;
+   &#125;).start();
+&#125;
+
+public static String getData(String orData)&#123;
+    String data=&quot;&quot;;
+    String[] split = orData.split(&quot;&amp;&quot;);
+    Random random = new Random(System.currentTimeMillis());
+
+    for (int i = 0; i &lt; split.length; i++) &#123;
+        if (split[i].contains(&quot;temperature&quot;))&#123;
+            String[] str = split[i].split(&quot;=&quot;);
+            double i1 =(double) random.nextInt() % 10 / 10;
+            if (i1&lt;0)&#123;
+                i1*=-1;
+            &#125;
+            double temperature=36.0+ (double) i1;
+            str[1]=temperature+&quot;&quot;;
+            System.out.println(&quot;正在自动填写随机体温.......\n随机体温为:&quot;+temperature);
+            split[i]=Merge_string(str);
+        &#125;
+
+    &#125;
+    for (int i = 0; i &lt; split.length; i++) &#123;
+        if (i!= split.length-1)&#123;
+            data+=split[i];
+            data+=&quot;&amp;&quot;;
+        &#125;else &#123;
+            data+=split[i];
+        &#125;
+    &#125;
+
+
+    return data;
+&#125;
+
+public static String Merge_string(String[] strings)&#123;
+    String tr=null;
+    for (int i = 0; i &lt; strings.length; i++) &#123;
+        if(i!=strings.length-1)&#123;
+            tr+=strings[i];
+            tr+=&quot;=&quot;;
+        &#125;else &#123;
+            tr+=strings[i];
+        &#125;
+    &#125;
+    return tr;
+&#125;
+
+public static void post (String url,String header,String body)throws Exception&#123;
+    URL obj = new URL(url);
+    HttpURLConnection con =(HttpURLConnection) obj.openConnection();
+    //添加请求头
+    con.setRequestMethod(&quot;POST&quot;);
+
+
+
+    setHeader(con,header);
+    //发送Post请求
+    con.setDoOutput(true);
+    DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+    wr.writeBytes(body);
+    wr.flush();
+    wr.close();
+    int responseCode = con.getResponseCode();
+    System.out.println(&quot;\nSending &#39;POST&#39; request to URL : &quot; + url);
+    System.out.println(&quot;Post parameters : &quot; + body);
+    System.out.println(&quot;Response Code : &quot; + responseCode);
+
+    BufferedReader in = new BufferedReader(
+            new InputStreamReader(con.getInputStream(),&quot;utf-8&quot;));
+    String inputLine;
+    StringBuffer response = new StringBuffer();
+
+
+
+    while ((inputLine = in.readLine()) != null) &#123;
+        response.append(inputLine);
+    &#125;
+    in.close();
+
+    //打印结果
+    System.out.println(response.toString());
+
+
+
+&#125;
+
+private static void setHeader(HttpURLConnection con,String cookie) &#123;
+    con.setRequestProperty(&quot;User-Agent&quot;,&quot; Mozilla/5.0 (Linux; Android 12; M2012K11AC Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/4255 MMWEBSDK/20220505 Mobile Safari/537.36 MMWEBID/2090 MicroMessenger/8.0.23.2160(0x28001757) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64&quot;);
+    con.setRequestProperty(&quot;Accept-Language&quot;, &quot;zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7&quot;);
+    con.setRequestProperty(&quot;Accept&quot;,&quot; text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/wxpic,image/tpg,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&quot;);
+    con.setRequestProperty(&quot;Accept-Encoding&quot;,&quot;&quot;);
+    con.setRequestProperty(&quot;Cookie&quot;,&quot;&quot;);//这里填写cookie
+
+
+
+
+
+&#125;
+</code></pre>
+<p>}</p>
+<hr>
+<h4 id="python代码"><a href="#python代码" class="headerlink" title="python代码"></a>python代码</h4><p>import requests</p>
+<p>class Auto:<br>    def run(self):<br>        url &#x3D; “这里填写发送的地址”<br>        personCookie &#x3D; “这里填写cookie”<br>        data &#x3D; “这里填写数据包 “<br>        headers &#x3D; {<br>            “User-Agent”: ‘Mozilla&#x2F;5.0 (Linux; Android 12; M2012K11AC Build&#x2F;SKQ1.211006.001; wv) AppleWebKit&#x2F;537.36 (KHTML, ‘<br>                          ‘like Gecko) Version&#x2F;4.0 Chrome&#x2F;86.0.4240.99 XWEB&#x2F;4255 MMWEBSDK&#x2F;20220505 Mobile Safari&#x2F;537.36 ‘<br>                          ‘MMWEBID&#x2F;2090 MicroMessenger&#x2F;8.0.23.2160(0x28001757) WeChat&#x2F;arm64 Weixin NetType&#x2F;WIFI ‘<br>                          ‘Language&#x2F;zh_CN ABI&#x2F;arm64’,<br>            “cookie”: personCookie,<br>            “Accept-Language”: “zh-CN,zh;q&#x3D;0.9,en-US;q&#x3D;0.8,en;q&#x3D;0.7”,<br>            “Accept”: “text&#x2F;html,application&#x2F;xhtml+xml,application&#x2F;xml;q&#x3D;0.9,image&#x2F;avif,image&#x2F;wxpic,image&#x2F;tpg,image&#x2F;webp,”<br>                      “image&#x2F;apng,<em>&#x2F;</em>;q&#x3D;0.8,application&#x2F;signed-exchange;v&#x3D;b3;q&#x3D;0.9”,<br>            “Referer”: “<a target="_blank" rel="noopener" href="http://xyjkdkfx.hbmzu.edu.cn/index/s.clock_in/post.html&quot;">http://xyjkdkfx.hbmzu.edu.cn/index/s.clock_in/post.html&quot;</a>,<br>            “Accept-Encoding”: “gzip, deflate”,<br>            “Host”: “xyjkdkfx.hbmzu.edu.cn”,<br>            “Connection”: “keep-alive”,<br>            “Content-Length”: “590”,<br>            “Cache-Control”: “max-age&#x3D;0”,<br>            “Upgrade-Insecure-Requests”: “1”,<br>            “Origin”: “<a target="_blank" rel="noopener" href="http://xyjkdkfx.hbmzu.edu.cn&quot;/">http://xyjkdkfx.hbmzu.edu.cn&quot;</a>,<br>            “Content-Type”: “application&#x2F;x-www-form-urlencoded”<br>        }</p>
+<pre><code>    req = requests.post(url, data=data, headers=headers)
+    if req.status_code == 200:
+        print(&quot;完成发送!&quot;)
+    else:
+        print(&quot;发送失败!&quot;)
+</code></pre>
+<p>if <strong>name</strong> &#x3D;&#x3D; “<strong>main</strong>“:<br>    print(“开始每天自动健康打卡…..”)<br>    Auto().run()</p>
+<h3 id="开始云函数建设"><a href="#开始云函数建设" class="headerlink" title="开始云函数建设"></a>开始云函数建设</h3><p><img src="https://cloud.tencent.com/login?s_url=https://console.cloud.tencent.com/scf/index?rid=1&ns=all" alt="点我打开腾讯云"><br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C11.png%22"><br>点击从头开始<br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C12.png%22"><br>再直接复制我的代码就行了<br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C13.png%22"><br>再往下滑<br>设置点击事件<br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C14.png%22"></p>
+<h4 id="大功告成了"><a href="#大功告成了" class="headerlink" title="大功告成了"></a>大功告成了</h4>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-termux" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

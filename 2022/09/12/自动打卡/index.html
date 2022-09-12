@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>knifefire的小空间</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原理：1.post填表—网络编程技术  2.fiddler抓包技术   3.云函数-----定时执行函数(代码)  post一个URL地址，它用于描述一个网络上的资源，而HTTP中的GET，POST，PUT，DELETE就对应着对这个资源的查，改，增，删4个操作。到这里，大家应该有个大概的了解了，GET一般用于获取&#x2F;查询资源信息，而POST一般用于更新资源信息。 抓包要实现对App的网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="knifefire的小空间">
+<meta property="og:url" content="http://yoursite.com/2022/09/12/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/index.html">
+<meta property="og:site_name" content="knifefire的小空间">
+<meta property="og:description" content="原理：1.post填表—网络编程技术  2.fiddler抓包技术   3.云函数-----定时执行函数(代码)  post一个URL地址，它用于描述一个网络上的资源，而HTTP中的GET，POST，PUT，DELETE就对应着对这个资源的查，改，增，删4个操作。到这里，大家应该有个大概的了解了，GET一般用于获取&#x2F;查询资源信息，而POST一般用于更新资源信息。 抓包要实现对App的网络">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C2.png%22">
+<meta property="og:image" content="http://yoursite.com/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C5.png%22">
+<meta property="og:image" content="http://yoursite.com/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C4.png%22">
+<meta property="og:image" content="http://yoursite.com/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C10.png%22">
+<meta property="og:image" content="http://yoursite.com/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C6.png%22">
+<meta property="og:image" content="http://yoursite.com/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C7.png%22">
+<meta property="og:image" content="https://cloud.tencent.com/login?s_url=https://console.cloud.tencent.com/scf/index?rid=1&ns=all">
+<meta property="og:image" content="http://yoursite.com/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C11.png%22">
+<meta property="og:image" content="http://yoursite.com/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C12.png%22">
+<meta property="og:image" content="http://yoursite.com/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C13.png%22">
+<meta property="og:image" content="http://yoursite.com/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C14.png%22">
+<meta property="article:published_time" content="2022-09-12T15:35:41.075Z">
+<meta property="article:modified_time" content="2022-09-12T16:05:57.172Z">
+<meta property="article:author" content="knifefire">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C2.png%22">
+  
+    <link rel="alternative" href="/atom.xml" title="knifefire的小空间" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/"></a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="/xxxxx" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱追剧,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页"></a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页"></a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">玩转开发工具</a></li>
+                
+                    <li><a href="/categories/digital">玩转数码</a></li>
+                
+                    <li><a href="/categories/algorithm">算法学习</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-自动打卡" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2022/09/12/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/" class="article-date">
+      <time datetime="2022-09-12T15:35:41.075Z" itemprop="datePublished">2022-09-12</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h3><h5 id="1-post填表—网络编程技术"><a href="#1-post填表—网络编程技术" class="headerlink" title="1.post填表—网络编程技术"></a>1.post填表—网络编程技术</h5><pre><code>  2.fiddler抓包技术
+  3.云函数-----定时执行函数(代码)
+</code></pre>
+<h4 id="post"><a href="#post" class="headerlink" title="post"></a>post</h4><p>一个URL地址，它用于描述一个网络上的资源，而HTTP中的GET，POST，PUT，DELETE就对应着对这个资源的查，改，增，删4个操作。到这里，大家应该有个大概的了解了，GET一般用于获取&#x2F;查询资源信息，而POST一般用于更新资源信息。</p>
+<h4 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h4><p>要实现对App的网络数据抓包，需要监控App与服务器交互之间的网络节点，监控其中任意一个网络节点（网卡），获取所有经过网卡中的数据，对这些数据按照网络协议进行解析，这就是抓包的基本原理。</p>
+<h3 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h3><p>校园健康打卡 就相当于更新, 所以用post 发送<br>而post发送什么呢?<br>这里就需要我们抓包,看看抓取的包 它干了什么,然后我们模拟一个环境,发送post 就实现了校园健康打卡.</p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="抓包-1"><a href="#抓包-1" class="headerlink" title="抓包"></a>抓包</h3><p>！<a target="_blank" rel="noopener" href="http://www.winwin7.com/soft/13111.html">点我进行fiddler下载</a></p>
+<h4 id="fiddler配置"><a href="#fiddler配置" class="headerlink" title="fiddler配置"></a>fiddler配置</h4><h6 id="点击选项"><a href="#点击选项" class="headerlink" title="点击选项"></a>点击选项</h6><p><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C2.png%22"></p>
+<h6 id="然后设置成我这样"><a href="#然后设置成我这样" class="headerlink" title="然后设置成我这样"></a>然后设置成我这样</h6><p>！<a href="%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C1.png%22"></a><br>！<a href="%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C3.png%22"></a><br>配置就欧克了</p>
+<h3 id="手机连接fiddler"><a href="#手机连接fiddler" class="headerlink" title="手机连接fiddler"></a>手机连接fiddler</h3><p> 最好是手机开热点，也可以都连接一个wifi。<br> 然后查看自己电脑的IP，可以在CMD中输入ipconfig，那个无线局域网下的ipv4地址就是你的ip地址</p>
+<h3 id="手机端"><a href="#手机端" class="headerlink" title="手机端"></a>手机端</h3><p> 在游览器输入你刚才查看的ip:8888<br> 点击下载并安装证书就OK了</p>
+<h3 id="抓取数据"><a href="#抓取数据" class="headerlink" title="抓取数据"></a>抓取数据</h3><p> 先将fiddler数据清空：<br> <img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C5.png%22"></p>
+<p>再点击手机上的打卡<br>打卡完毕后,fidder上已经有数据了 ,双击点开<br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C4.png%22"><br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C10.png%22"><br>这里就是个人信息啦 你也看到36.5的温度了<br>这时我们点击表头:<br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C6.png%22"><br>再复制所有标头<br>到一个文本里面<br>找到 cookie &#x3D; 后面的内容<br>把后面的内容复制过来  这就是你的登入信息  cookie  当然  每个人的都不一样!<br>再把文本视图的内容全部复制下来,这里面包含你的温度,位置<br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C7.png%22"><br>到这里数据获取全部完毕.</p>
+<h3 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h3><p>这里我最开始是用Java 写的,因为其他没学过! 后面因为云函数的原因 看了一下python<br>这里附上代码 </p>
+<h4 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h4><p>import java.io.UnsupportedEncodingException;import java.util.Random;import java.io.BufferedReader;import java.io.DataOutputStream;import java.io.InputStreamReader;import java.net.HttpURLConnection;import java.net.URL;public class Util {</p>
+<pre><code>private Util() &#123;
+&#125;
+
+
+public static void main(String[] args) throws Exception &#123;
+   new Thread(new Runnable() &#123;
+       @Override
+       public void run() &#123;
+           String str=&quot;&quot;;//这里填写data数据
+           String data = getData(str);
+           try &#123;
+               System.out.println(java.net.URLDecoder.decode(data, &quot;UTF-8&quot;));
+           &#125; catch (UnsupportedEncodingException e) &#123;
+               throw new RuntimeException(e);
+           &#125;
+           try &#123;
+               post(&quot;http://xyjkdkfx.hbmzu.edu.cn/index/s.clock_in/post.html&quot;,&quot;&quot;,data);//第一个填写网站
+           &#125; catch (Exception e) &#123;
+               throw new RuntimeException(e);
+           &#125;
+       &#125;
+   &#125;).start();
+&#125;
+
+public static String getData(String orData)&#123;
+    String data=&quot;&quot;;
+    String[] split = orData.split(&quot;&amp;&quot;);
+    Random random = new Random(System.currentTimeMillis());
+
+    for (int i = 0; i &lt; split.length; i++) &#123;
+        if (split[i].contains(&quot;temperature&quot;))&#123;
+            String[] str = split[i].split(&quot;=&quot;);
+            double i1 =(double) random.nextInt() % 10 / 10;
+            if (i1&lt;0)&#123;
+                i1*=-1;
+            &#125;
+            double temperature=36.0+ (double) i1;
+            str[1]=temperature+&quot;&quot;;
+            System.out.println(&quot;正在自动填写随机体温.......\n随机体温为:&quot;+temperature);
+            split[i]=Merge_string(str);
+        &#125;
+
+    &#125;
+    for (int i = 0; i &lt; split.length; i++) &#123;
+        if (i!= split.length-1)&#123;
+            data+=split[i];
+            data+=&quot;&amp;&quot;;
+        &#125;else &#123;
+            data+=split[i];
+        &#125;
+    &#125;
+
+
+    return data;
+&#125;
+
+public static String Merge_string(String[] strings)&#123;
+    String tr=null;
+    for (int i = 0; i &lt; strings.length; i++) &#123;
+        if(i!=strings.length-1)&#123;
+            tr+=strings[i];
+            tr+=&quot;=&quot;;
+        &#125;else &#123;
+            tr+=strings[i];
+        &#125;
+    &#125;
+    return tr;
+&#125;
+
+public static void post (String url,String header,String body)throws Exception&#123;
+    URL obj = new URL(url);
+    HttpURLConnection con =(HttpURLConnection) obj.openConnection();
+    //添加请求头
+    con.setRequestMethod(&quot;POST&quot;);
+
+
+
+    setHeader(con,header);
+    //发送Post请求
+    con.setDoOutput(true);
+    DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+    wr.writeBytes(body);
+    wr.flush();
+    wr.close();
+    int responseCode = con.getResponseCode();
+    System.out.println(&quot;\nSending &#39;POST&#39; request to URL : &quot; + url);
+    System.out.println(&quot;Post parameters : &quot; + body);
+    System.out.println(&quot;Response Code : &quot; + responseCode);
+
+    BufferedReader in = new BufferedReader(
+            new InputStreamReader(con.getInputStream(),&quot;utf-8&quot;));
+    String inputLine;
+    StringBuffer response = new StringBuffer();
+
+
+
+    while ((inputLine = in.readLine()) != null) &#123;
+        response.append(inputLine);
+    &#125;
+    in.close();
+
+    //打印结果
+    System.out.println(response.toString());
+
+
+
+&#125;
+
+private static void setHeader(HttpURLConnection con,String cookie) &#123;
+    con.setRequestProperty(&quot;User-Agent&quot;,&quot; Mozilla/5.0 (Linux; Android 12; M2012K11AC Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/4255 MMWEBSDK/20220505 Mobile Safari/537.36 MMWEBID/2090 MicroMessenger/8.0.23.2160(0x28001757) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64&quot;);
+    con.setRequestProperty(&quot;Accept-Language&quot;, &quot;zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7&quot;);
+    con.setRequestProperty(&quot;Accept&quot;,&quot; text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/wxpic,image/tpg,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&quot;);
+    con.setRequestProperty(&quot;Accept-Encoding&quot;,&quot;&quot;);
+    con.setRequestProperty(&quot;Cookie&quot;,&quot;&quot;);//这里填写cookie
+
+
+
+
+
+&#125;
+</code></pre>
+<p>}</p>
+<hr>
+<h4 id="python代码"><a href="#python代码" class="headerlink" title="python代码"></a>python代码</h4><p>import requests</p>
+<p>class Auto:<br>    def run(self):<br>        url &#x3D; “这里填写发送的地址”<br>        personCookie &#x3D; “这里填写cookie”<br>        data &#x3D; “这里填写数据包 “<br>        headers &#x3D; {<br>            “User-Agent”: ‘Mozilla&#x2F;5.0 (Linux; Android 12; M2012K11AC Build&#x2F;SKQ1.211006.001; wv) AppleWebKit&#x2F;537.36 (KHTML, ‘<br>                          ‘like Gecko) Version&#x2F;4.0 Chrome&#x2F;86.0.4240.99 XWEB&#x2F;4255 MMWEBSDK&#x2F;20220505 Mobile Safari&#x2F;537.36 ‘<br>                          ‘MMWEBID&#x2F;2090 MicroMessenger&#x2F;8.0.23.2160(0x28001757) WeChat&#x2F;arm64 Weixin NetType&#x2F;WIFI ‘<br>                          ‘Language&#x2F;zh_CN ABI&#x2F;arm64’,<br>            “cookie”: personCookie,<br>            “Accept-Language”: “zh-CN,zh;q&#x3D;0.9,en-US;q&#x3D;0.8,en;q&#x3D;0.7”,<br>            “Accept”: “text&#x2F;html,application&#x2F;xhtml+xml,application&#x2F;xml;q&#x3D;0.9,image&#x2F;avif,image&#x2F;wxpic,image&#x2F;tpg,image&#x2F;webp,”<br>                      “image&#x2F;apng,<em>&#x2F;</em>;q&#x3D;0.8,application&#x2F;signed-exchange;v&#x3D;b3;q&#x3D;0.9”,<br>            “Referer”: “<a target="_blank" rel="noopener" href="http://xyjkdkfx.hbmzu.edu.cn/index/s.clock_in/post.html&quot;">http://xyjkdkfx.hbmzu.edu.cn/index/s.clock_in/post.html&quot;</a>,<br>            “Accept-Encoding”: “gzip, deflate”,<br>            “Host”: “xyjkdkfx.hbmzu.edu.cn”,<br>            “Connection”: “keep-alive”,<br>            “Content-Length”: “590”,<br>            “Cache-Control”: “max-age&#x3D;0”,<br>            “Upgrade-Insecure-Requests”: “1”,<br>            “Origin”: “<a target="_blank" rel="noopener" href="http://xyjkdkfx.hbmzu.edu.cn&quot;/">http://xyjkdkfx.hbmzu.edu.cn&quot;</a>,<br>            “Content-Type”: “application&#x2F;x-www-form-urlencoded”<br>        }</p>
+<pre><code>    req = requests.post(url, data=data, headers=headers)
+    if req.status_code == 200:
+        print(&quot;完成发送!&quot;)
+    else:
+        print(&quot;发送失败!&quot;)
+</code></pre>
+<p>if <strong>name</strong> &#x3D;&#x3D; “<strong>main</strong>“:<br>    print(“开始每天自动健康打卡…..”)<br>    Auto().run()</p>
+<h3 id="开始云函数建设"><a href="#开始云函数建设" class="headerlink" title="开始云函数建设"></a>开始云函数建设</h3><p><img src="https://cloud.tencent.com/login?s_url=https://console.cloud.tencent.com/scf/index?rid=1&ns=all" alt="点我打开腾讯云"><br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C11.png%22"><br>点击从头开始<br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C12.png%22"><br>再直接复制我的代码就行了<br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C13.png%22"><br>再往下滑<br>设置点击事件<br><img src="/%22C:%5CUsers%5C%E9%83%91%E8%88%AA%5CDesktop%5C14.png%22"></p>
+<h4 id="大功告成了"><a href="#大功告成了" class="headerlink" title="大功告成了"></a>大功告成了</h4>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2022/09/12/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/"></a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问  的个人博客"></a></p>
+        <p><span>发布时间:</span>2022年09月12日 - 23时35分</p>
+        <p><span>最后更新:</span>2022年09月13日 - 00时05分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2022/09/12/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/" title="">http://yoursite.com/2022/09/12/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2022/09/12/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/　　作者: " title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a  href="/2022/09/12/termux/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">原理：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-post%E5%A1%AB%E8%A1%A8%E2%80%94%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.post填表—网络编程技术</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#post"><span class="toc-number">1.1.</span> <span class="toc-text">post</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%93%E5%8C%85"><span class="toc-number">1.2.</span> <span class="toc-text">抓包</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">实现原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%88%98"><span class="toc-number"></span> <span class="toc-text">实战</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%93%E5%8C%85-1"><span class="toc-number">1.</span> <span class="toc-text">抓包</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#fiddler%E9%85%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">fiddler配置</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%82%B9%E5%87%BB%E9%80%89%E9%A1%B9"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">点击选项</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%84%B6%E5%90%8E%E8%AE%BE%E7%BD%AE%E6%88%90%E6%88%91%E8%BF%99%E6%A0%B7"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">然后设置成我这样</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5fiddler"><span class="toc-number">2.</span> <span class="toc-text">手机连接fiddler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E7%AB%AF"><span class="toc-number">3.</span> <span class="toc-text">手机端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%93%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">4.</span> <span class="toc-text">抓取数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81"><span class="toc-number">5.</span> <span class="toc-text">编写代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#java%E4%BB%A3%E7%A0%81"><span class="toc-number">5.1.</span> <span class="toc-text">java代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python%E4%BB%A3%E7%A0%81"><span class="toc-number">5.2.</span> <span class="toc-text">python代码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E4%BA%91%E5%87%BD%E6%95%B0%E5%BB%BA%E8%AE%BE"><span class="toc-number">6.</span> <span class="toc-text">开始云函数建设</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%A7%E5%8A%9F%E5%91%8A%E6%88%90%E4%BA%86"><span class="toc-number">6.1.</span> <span class="toc-text">大功告成了</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2022/09/12/termux/" title="下一篇: ">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/09/12/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/">自动打卡</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/09/12/termux/">termux</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2022 knifefire
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-haruto"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
