@@ -16,7 +16,6 @@
 <meta property="og:site_name" content="knifefire的小空间">
 <meta property="og:description" content="自动打卡原理： 1.post填表—网络编程技术 2.fiddler抓包技术 3.云函数—–定时执行函数(代码)  post一个URL地址，它用于描述一个网络上的资源，而HTTP中的GET，POST，PUT，DELETE就对应着对这个资源的查，改，增，删4个操作。到这里，大家应该有个大概的了解了，GET一般用于获取&#x2F;查询资源信息，而POST一般用于更新资源信息。 抓包要实现对App的网络数">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://www.winwin7.com/soft/13111.html">
 <meta property="og:image" content="http://yoursite.com/img/2.png">
 <meta property="og:image" content="http://yoursite.com/img/1.png">
 <meta property="og:image" content="http://yoursite.com/img/3.png">
@@ -25,16 +24,15 @@
 <meta property="og:image" content="http://yoursite.com/img/10.png">
 <meta property="og:image" content="http://yoursite.com/img/6.png">
 <meta property="og:image" content="http://yoursite.com/img/7.png">
-<meta property="og:image" content="https://cloud.tencent.com/login?s_url=https://console.cloud.tencent.com/scf/index?rid=1&ns=all">
 <meta property="og:image" content="http://yoursite.com/img/11.png">
 <meta property="og:image" content="http://yoursite.com/img/12.png">
 <meta property="og:image" content="http://yoursite.com/img/13.png">
 <meta property="og:image" content="http://yoursite.com/img/14.png">
 <meta property="article:published_time" content="2022-09-12T15:35:41.075Z">
-<meta property="article:modified_time" content="2022-09-13T02:02:58.852Z">
+<meta property="article:modified_time" content="2022-09-13T02:25:54.178Z">
 <meta property="article:author" content="knifefire">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.winwin7.com/soft/13111.html">
+<meta name="twitter:image" content="http://yoursite.com/img/2.png">
   
     <link rel="alternative" href="/atom.xml" title="knifefire的小空间" type="application/atom+xml">
   
@@ -316,7 +314,7 @@
 <h4 id="post"><a href="#post" class="headerlink" title="post"></a>post</h4><p>一个URL地址，它用于描述一个网络上的资源，而HTTP中的GET，POST，PUT，DELETE就对应着对这个资源的查，改，增，删4个操作。到这里，大家应该有个大概的了解了，GET一般用于获取&#x2F;查询资源信息，而POST一般用于更新资源信息。</p>
 <h4 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h4><p>要实现对App的网络数据抓包，需要监控App与服务器交互之间的网络节点，监控其中任意一个网络节点（网卡），获取所有经过网卡中的数据，对这些数据按照网络协议进行解析，这就是抓包的基本原理。</p>
 <h3 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h3><p>校园健康打卡 就相当于更新, 所以用post 发送<br>而post发送什么呢?<br>这里就需要我们抓包,看看抓取的包 它干了什么,然后我们模拟一个环境,发送post 就实现了校园健康打卡.</p>
-<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="抓包-1"><a href="#抓包-1" class="headerlink" title="抓包"></a>抓包</h3><p><img src="http://www.winwin7.com/soft/13111.html" alt="点我进行fiddler下载"></p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h2 id="抓包-1"><a href="#抓包-1" class="headerlink" title="抓包"></a>抓包</h2><p><a target="_blank" rel="noopener" href="http://www.winwin7.com/soft/13111.html">点我进行fiddler下载</a></p>
 <h3 id="fiddler配置"><a href="#fiddler配置" class="headerlink" title="fiddler配置"></a>fiddler配置</h3><p>点击选项<br><img src="/img/2.png"><br>然后设置成我这样<br><img src="/img/1.png"><br><img src="/img/3.png"><br>配置就欧克了</p>
 <h3 id="手机连接fiddler"><a href="#手机连接fiddler" class="headerlink" title="手机连接fiddler"></a>手机连接fiddler</h3><p> 最好是手机开热点，也可以都连接一个wifi。<br> 然后查看自己电脑的IP，可以在CMD中输入ipconfig，那个无线局域网下的ipv4地址就是你的ip地址</p>
 <h3 id="手机端"><a href="#手机端" class="headerlink" title="手机端"></a>手机端</h3><p>在游览器输入你刚才查看的ip:8888<br>点击下载并安装证书就OK了</p>
@@ -487,7 +485,7 @@ if __name__ == &quot;__main__&quot;:
     print(&quot;开始每天自动健康打卡.....&quot;)
 Auto().run()
 </code></pre>
-<h3 id="开始云函数建设"><a href="#开始云函数建设" class="headerlink" title="开始云函数建设"></a>开始云函数建设</h3><p><img src="https://cloud.tencent.com/login?s_url=https://console.cloud.tencent.com/scf/index?rid=1&ns=all" alt="点我打开腾讯云"><br><img src="/img/11.png"><br>点击从头开始<br><img src="/img/12.png"><br>再直接复制我的代码就行了<br><img src="/img/13.png"><br>再往下滑<br>设置点击事件<br><img src="/img/14.png"></p>
+<h3 id="开始云函数建设"><a href="#开始云函数建设" class="headerlink" title="开始云函数建设"></a>开始云函数建设</h3><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/login?s_url=https://console.cloud.tencent.com/scf/index?rid=1&ns=all">点我打开腾讯云</a><br><img src="/img/11.png"><br>点击从头开始<br><img src="/img/12.png"><br>再直接复制我的代码就行了<br><img src="/img/13.png"><br>再往下滑<br>设置点击事件<br><img src="/img/14.png"></p>
 <h4 id="大功告成了"><a href="#大功告成了" class="headerlink" title="大功告成了"></a>大功告成了</h4>
       
     </div>
@@ -499,7 +497,7 @@ Auto().run()
         <p><span>本文标题:</span><a  href="/2022/09/12/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/"></a></p>
         <p><span>文章作者:</span><a  href="/" title="访问  的个人博客"></a></p>
         <p><span>发布时间:</span>2022年09月12日 - 23时35分</p>
-        <p><span>最后更新:</span>2022年09月13日 - 10时02分</p>
+        <p><span>最后更新:</span>2022年09月13日 - 10时25分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2022/09/12/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/" title="">http://yoursite.com/2022/09/12/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2022/09/12/%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1/　　作者: " title=""></span>
@@ -527,7 +525,7 @@ Auto().run()
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1"><span class="toc-number">1.</span> <span class="toc-text">自动打卡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">1.0.1.</span> <span class="toc-text">原理：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#post"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">post</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%93%E5%8C%85"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">抓包</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-number">1.0.2.</span> <span class="toc-text">实现原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%88%98"><span class="toc-number">1.1.</span> <span class="toc-text">实战</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%93%E5%8C%85-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">抓包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fiddler%E9%85%8D%E7%BD%AE"><span class="toc-number">1.1.2.</span> <span class="toc-text">fiddler配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5fiddler"><span class="toc-number">1.1.3.</span> <span class="toc-text">手机连接fiddler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E7%AB%AF"><span class="toc-number">1.1.4.</span> <span class="toc-text">手机端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%93%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">1.1.5.</span> <span class="toc-text">抓取数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.6.</span> <span class="toc-text">编写代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#java%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">java代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.6.2.</span> <span class="toc-text">python代码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E4%BA%91%E5%87%BD%E6%95%B0%E5%BB%BA%E8%AE%BE"><span class="toc-number">1.1.7.</span> <span class="toc-text">开始云函数建设</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%A7%E5%8A%9F%E5%91%8A%E6%88%90%E4%BA%86"><span class="toc-number">1.1.7.1.</span> <span class="toc-text">大功告成了</span></a></li></ol></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1"><span class="toc-number">1.</span> <span class="toc-text">自动打卡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">1.0.1.</span> <span class="toc-text">原理：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#post"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">post</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%93%E5%8C%85"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">抓包</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-number">1.0.2.</span> <span class="toc-text">实现原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%88%98"><span class="toc-number">1.1.</span> <span class="toc-text">实战</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%93%E5%8C%85-1"><span class="toc-number">1.2.</span> <span class="toc-text">抓包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fiddler%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.1.</span> <span class="toc-text">fiddler配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5fiddler"><span class="toc-number">1.2.2.</span> <span class="toc-text">手机连接fiddler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E7%AB%AF"><span class="toc-number">1.2.3.</span> <span class="toc-text">手机端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%93%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">1.2.4.</span> <span class="toc-text">抓取数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.5.</span> <span class="toc-text">编写代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#java%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.5.1.</span> <span class="toc-text">java代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.5.2.</span> <span class="toc-text">python代码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E4%BA%91%E5%87%BD%E6%95%B0%E5%BB%BA%E8%AE%BE"><span class="toc-number">1.2.6.</span> <span class="toc-text">开始云函数建设</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%A7%E5%8A%9F%E5%91%8A%E6%88%90%E4%BA%86"><span class="toc-number">1.2.6.1.</span> <span class="toc-text">大功告成了</span></a></li></ol></li></ol></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {

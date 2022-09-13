@@ -302,7 +302,7 @@
 <h4 id="post"><a href="#post" class="headerlink" title="post"></a>post</h4><p>一个URL地址，它用于描述一个网络上的资源，而HTTP中的GET，POST，PUT，DELETE就对应着对这个资源的查，改，增，删4个操作。到这里，大家应该有个大概的了解了，GET一般用于获取&#x2F;查询资源信息，而POST一般用于更新资源信息。</p>
 <h4 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h4><p>要实现对App的网络数据抓包，需要监控App与服务器交互之间的网络节点，监控其中任意一个网络节点（网卡），获取所有经过网卡中的数据，对这些数据按照网络协议进行解析，这就是抓包的基本原理。</p>
 <h3 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h3><p>校园健康打卡 就相当于更新, 所以用post 发送<br>而post发送什么呢?<br>这里就需要我们抓包,看看抓取的包 它干了什么,然后我们模拟一个环境,发送post 就实现了校园健康打卡.</p>
-<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="抓包-1"><a href="#抓包-1" class="headerlink" title="抓包"></a>抓包</h3><p><img src="http://www.winwin7.com/soft/13111.html" alt="点我进行fiddler下载"></p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h2 id="抓包-1"><a href="#抓包-1" class="headerlink" title="抓包"></a>抓包</h2><p><a target="_blank" rel="noopener" href="http://www.winwin7.com/soft/13111.html">点我进行fiddler下载</a></p>
 <h3 id="fiddler配置"><a href="#fiddler配置" class="headerlink" title="fiddler配置"></a>fiddler配置</h3><p>点击选项<br><img src="/img/2.png"><br>然后设置成我这样<br><img src="/img/1.png"><br><img src="/img/3.png"><br>配置就欧克了</p>
 <h3 id="手机连接fiddler"><a href="#手机连接fiddler" class="headerlink" title="手机连接fiddler"></a>手机连接fiddler</h3><p> 最好是手机开热点，也可以都连接一个wifi。<br> 然后查看自己电脑的IP，可以在CMD中输入ipconfig，那个无线局域网下的ipv4地址就是你的ip地址</p>
 <h3 id="手机端"><a href="#手机端" class="headerlink" title="手机端"></a>手机端</h3><p>在游览器输入你刚才查看的ip:8888<br>点击下载并安装证书就OK了</p>
@@ -473,7 +473,7 @@ if __name__ == &quot;__main__&quot;:
     print(&quot;开始每天自动健康打卡.....&quot;)
 Auto().run()
 </code></pre>
-<h3 id="开始云函数建设"><a href="#开始云函数建设" class="headerlink" title="开始云函数建设"></a>开始云函数建设</h3><p><img src="https://cloud.tencent.com/login?s_url=https://console.cloud.tencent.com/scf/index?rid=1&ns=all" alt="点我打开腾讯云"><br><img src="/img/11.png"><br>点击从头开始<br><img src="/img/12.png"><br>再直接复制我的代码就行了<br><img src="/img/13.png"><br>再往下滑<br>设置点击事件<br><img src="/img/14.png"></p>
+<h3 id="开始云函数建设"><a href="#开始云函数建设" class="headerlink" title="开始云函数建设"></a>开始云函数建设</h3><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/login?s_url=https://console.cloud.tencent.com/scf/index?rid=1&ns=all">点我打开腾讯云</a><br><img src="/img/11.png"><br>点击从头开始<br><img src="/img/12.png"><br>再直接复制我的代码就行了<br><img src="/img/13.png"><br>再往下滑<br>设置点击事件<br><img src="/img/14.png"></p>
 <h4 id="大功告成了"><a href="#大功告成了" class="headerlink" title="大功告成了"></a>大功告成了</h4>
       
     </div>
