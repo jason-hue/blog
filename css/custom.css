@@ -75,3 +75,15 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 #web_bg {
     background: var(--card-bg) !important; /* 慎用!important */
   }
+.jg-caption{
+    text-align: center !important;
+}
+.jg-caption-visible::before {
+    content: "⊙ ";
+} 
+.fancybox-caption__body::before {
+    content: "⊙ ";
+} 
+.img-alt.is-center::before {
+    content: "⊙ ";
+}
