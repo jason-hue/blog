@@ -6,7 +6,3 @@
     --card-bg: rgba(26, 27, 29, .9) !important; /* 全局背景调整 */
   }
 
-#aside-content.aside-content > .sticky_layout > .card-widget.card-clock > .card-glass > .card-background {
-    background-color: unset ;
-    box-shadow: unset ;
-}
